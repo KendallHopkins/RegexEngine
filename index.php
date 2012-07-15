@@ -5,6 +5,7 @@
 		<title>Regex Engine</title>
 		<link rel="stylesheet" href="//current.bootstrapcdn.com/bootstrap-v204/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="vendor/fancyBox/source/jquery.fancybox.css"/>
+		<link rel="stylesheet" href="vendor/jQuery-contextMenu/src/jquery.contextMenu.css"/>
 <? if( array_key_exists( "debug", $_GET ) ) { ?>
 		<link rel="stylesheet/less" href="main.less">
 <? } else { ?>
@@ -16,6 +17,7 @@
 		<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
 		<script type='text/javascript' src='vendor/jsPlumb/build/1.3.9/js/jquery.jsPlumb-1.3.9-all-min.js'></script>
 		<script type='text/javascript' src='vendor/fancyBox/source/jquery.fancybox.js'></script>
+		<script type='text/javascript' src='vendor/jQuery-contextMenu/src/jquery.contextMenu.js'></script>
 <? if( array_key_exists( "debug", $_GET ) ) { ?>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
 		<script type="text/coffeescript" src="main.coffee"></script>

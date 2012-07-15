@@ -80,6 +80,16 @@ $ ->
 	jsPlumb.bind "jsPlumbConnection", recalculate
 	jsPlumb.bind "jsPlumbConnectionDetached", recalculate
 	
+	$.contextMenu
+		selector: ".node"
+		animation:
+			show: "show"
+			hide: "hide"
+		items:
+			delete:
+				name: "Delete"
+				callback: (key, opt) -> opt.$trigger.data("object").delete()
+	
 	class Node
 		list = []
 		@list = -> item for item in list when item instanceof @
@@ -112,6 +122,10 @@ $ ->
 			class: @class()
 		
 		setState: (data) ->
+		
+		delete: ->
+			jsPlumb.removeAllEndpoints @element
+			@element.remove()
 	
 	window.Node = Node
 	
