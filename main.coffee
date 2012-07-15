@@ -1,3 +1,20 @@
+Function::delay = (delay) ->
+	timeout = null
+	(args...) =>
+		clearTimeout timeout unless timeout is null
+		current_timeout = timeout = setTimeout =>
+			current_timeout = timeout = null
+			@ args...
+		, delay
+		-> clearTimeout current_timeout unless current_timeout is null
+
+Function::smartDelay = (delay) ->
+	prev_cancel_closure = null
+	f_delayed = @.delay delay
+	(args...) =>
+		prev_cancel_closure() if prev_cancel_closure
+		prev_cancel_closure = f_delayed args...
+
 $ ->
 	#document.onselectstart = -> false
 	
@@ -71,6 +88,8 @@ $ ->
 				throw "not even node was passed back a state" if data.node_states.length isnt nodes.length
 				for i in [0...nodes.length]
 					nodes[i].setState data.node_states[i]
+	
+	recalculate = recalculate.smartDelay 250
 	#init = (connection) ->
 	#	console.log connection
 	
