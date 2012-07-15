@@ -8,6 +8,7 @@ set_time_limit( 2 );
 $did_finish_nicely = FALSE;
 register_shutdown_function( function() use ( &$did_finish_nicely ) {
 	if( ! $did_finish_nicely ) {
+		header( $_SERVER["SERVER_PROTOCOL"]." 200 OK" );
 		$json_output = json_encode( array(
 			"success" => FALSE,
 			"message" => "timeout",
