@@ -3,7 +3,7 @@
 header('Content-type: application/json');
 ini_set( "memory_limit", "100M" );
 ini_set( "display_errors", 0 );
-set_time_limit( 5 );
+set_time_limit( 2 );
 
 $did_finish_nicely = FALSE;
 register_shutdown_function( function() use ( &$did_finish_nicely ) {
