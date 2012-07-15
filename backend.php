@@ -3,6 +3,7 @@
 header('Content-type: application/json');
 ini_set( "memory_limit", "100M" );
 ini_set( "display_errors", 0 );
+set_time_limit( 5 );
 
 $did_finish_nicely = FALSE;
 register_shutdown_function( function() use ( &$did_finish_nicely ) {
@@ -16,7 +17,6 @@ register_shutdown_function( function() use ( &$did_finish_nicely ) {
 	}
 } );
 
-set_time_limit( 5 );
 error_reporting( -1 );
 set_error_handler( function( $error_flag, $error_string, $error_file, $error_line ) {
 		if( ! ( ini_get('error_reporting') & $error_flag ) )
@@ -25,7 +25,12 @@ set_error_handler( function( $error_flag, $error_string, $error_file, $error_lin
 		throw new ErrorException( $error_string, 0, $error_flag, $error_file, $error_line );
 } );
 set_exception_handler( function( Exception $e ) use ( &$did_finish_nicely ) {
-	$json_output = json_encode( array( "success" => FALSE, "message" => $e->getMessage() ), TRUE );
+	$json_output = json_encode( array(
+		"success" => FALSE,
+		"message" => $e->getMessage(),
+		"file" => $e->getFile(),
+		"line" => $e->getLine()
+	), TRUE );
 	print $json_output;
 	file_put_contents( dirname( __FILE__ )."/exception.log", $json_output."\n".json_encode( $_POST )."\n", FILE_APPEND );
 	$did_finish_nicely = TRUE;
