@@ -84,7 +84,7 @@
 		<div class="prototype window well node node_output_count">
 			<span class="type_normal" style="display: none;">0</span>
 			<span class="type_infinity" style="display: none;">∞</span>
-			<span class="type_error">Error</span>
+			<span class="type_no_input">No Input</span>
 		</div>
 		<div class="prototype window well node node_output_graph">
 			<div class="type_normal" style="display: none;"><a href="" title=""><img src="" alt=""/></a></div>

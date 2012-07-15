@@ -175,7 +175,7 @@ $ ->
 			super data
 			@element.find("span").hide()
 			if data.count is null
-				@element.find("span.type_error").show()
+				@element.find("span.type_no_input").show()
 			else if data.count is -1
 				@element.find("span.type_infinity").show()
 			else
@@ -192,21 +192,23 @@ $ ->
 		class: -> "node_output_graph"
 		setState: (data) ->
 			super data
+			dot_data = data.text
 			
 			@element.find( "> div" ).hide()
-			
-			if not data.text?
+			if not dot_data?
 				@element.find(".type_no_input").show()
 				return
+			
+			dot_data = dot_data.replace( /\n/g, "" )
 			
 			max_url_length = 2048
 			google_url_small = "//chart.googleapis.com/chart?" + jQuery.param
 				cht: "gv"
-				chl: data.text
+				chl: dot_data
 				chs: "300x200"
 			google_url_large = "//chart.googleapis.com/chart?" + jQuery.param
 				cht: "gv"
-				chl: data.text
+				chl: dot_data
 				_: ".png" #hack to make fancybox work
 			
 			if google_url_small.length > max_url_length or google_url_large.length > max_url_length
