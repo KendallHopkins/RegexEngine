@@ -1,0 +1,9 @@
+ExpiresActive On
+ExpiresByType application/javascript "access plus 1 years"
+ExpiresByType text/css "access plus 1 years"
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/javascript
