@@ -1,0 +1,9 @@
+[submodule "vendor/FormalTheory"]
+	path = vendor/FormalTheory
+	url = https://github.com/KendallHopkins/FormalTheory.git
+[submodule "vendor/jsPlumb"]
+	path = vendor/jsPlumb
+	url = https://github.com/sporritt/jsPlumb.git
+[submodule "vendor/fancyBox"]
+	path = vendor/fancyBox
+	url = https://github.com/fancyapps/fancyBox.git

@@ -1,0 +1,65 @@
+.window {
+	z-index:20;
+	position:absolute;
+}
+
+.active {
+	border:1px dotted green;
+}
+.hover {
+	border:1px dotted red;
+}
+
+.prototype {
+	display: none;
+}
+
+.node_wrapper {
+	padding-top: 10px;
+	background-color: black;
+	width: auto;
+	.node {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		padding-top: 10px;
+	}
+}
+
+.node_union, .node_intersection, .node_negation {
+	font-size: 40px;
+	text-align: center;
+	padding: 25px;
+}
+
+.node_output_graph {
+	width: 290px;
+	height: 190px;
+}
+
+.node_output_count span.type_infinity {
+	font-size: 24px;
+}
+
+body {
+	padding-top: 40px;
+}
+
+#main {
+	padding: 50px;
+}
+
+#toolbar_container {
+	background-color: #F5F5F5;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-color: #d2cfcf;
+}
+
+#toolbar {
+	margin: 0px auto;
+	width: 940px;
+	padding: 8px;
+}
+
+._jsPlumb_connector { z-index:4; }
+._jsPlumb_endpoint, .endpointTargetLabel, .endpointSourceLabel{ z-index:21;cursor:pointer; }
