@@ -11,8 +11,8 @@
 <? } else { ?>
 		<link rel="stylesheet" href="build.css?_t=<? print filemtime( __DIR__."/build.css" ) ?>"/>
 <? } ?>
-		<script type='text/javascript' defer="defer" src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js'></script>
-		<script type='text/javascript' defer="defer" src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.js'></script>
+		<script type='text/javascript' defer="defer" src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script type='text/javascript' defer="defer" src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
 		<script type='text/javascript' defer="defer" src='//current.bootstrapcdn.com/bootstrap-v204/js/bootstrap.min.js'></script>
 <? if( array_key_exists( "debug", $_GET ) ) { ?>
 		<script type='text/javascript' defer="defer" src='vendor/jsPlumb/build/1.3.9/js/jquery.jsPlumb-1.3.9-all-min.js'></script>
