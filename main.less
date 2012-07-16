@@ -3,11 +3,13 @@
 	position:absolute;
 }
 
-.active {
-	border:1px dotted green;
-}
-.hover {
-	border:1px dotted red;
+#main {
+	.active {
+		border:1px dotted green;
+	}
+	.hover {
+		border:1px dotted red;
+	}
 }
 
 .prototype {
@@ -64,15 +66,14 @@ body {
 ._jsPlumb_connector { z-index:4; }
 ._jsPlumb_endpoint, .endpointTargetLabel, .endpointSourceLabel{ z-index:21;cursor:pointer; }
 
-#google_ads_container_1 {
+#google_ads_container {
 	position: absolute;
 	top:0px;
-    bottom:0px;
-    right:0px;
-    background-color: #FFFFFF;
-    height: 100%;
-    z-index: -1;
-}
-#google_ads_container_2 {
-	padding-top: 105px;
+	bottom:0px;
+	right:0px;
+	height: 100%;
+	z-index: 100;
+	> div {
+		padding-top: 105px;
+	}
 }

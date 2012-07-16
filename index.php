@@ -33,8 +33,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="google_ads_container_1">
-			<div id="google_ads_container_2">
+		<div id="google_ads_container">
+			<div>
 				<script type="text/javascript"><!--
 					google_ad_client = "ca-pub-0523377891461555";
 					/* RegexEngine */
