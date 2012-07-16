@@ -33,6 +33,19 @@
 				</div>
 			</div>
 		</div>
+		<div id="google_ads_container_1">
+			<div id="google_ads_container_2">
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-0523377891461555";
+					/* RegexEngine */
+					google_ad_slot = "4315264425";
+					google_ad_width = 120;
+					google_ad_height = 600;
+					//-->
+				</script>
+				<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+			</div>
+		</div>
 		<div id="tab_main" style="display: none;">
 			<? require( "main.html" ); ?>
 		</div>
