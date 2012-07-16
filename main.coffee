@@ -151,6 +151,7 @@ $ ->
 		
 		delete: ->
 			jsPlumb.removeAllEndpoints @element
+			list = (item for item in list when item isnt @)
 			@element.remove()
 	
 	window.Node = Node
