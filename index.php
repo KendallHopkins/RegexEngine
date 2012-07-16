@@ -25,70 +25,19 @@
 		<script type='text/javascript' defer="defer" src='build.js?_t=<? print filemtime( __DIR__."/build.js" ) ?>'></script>
 <? } ?>
 	</head>
-	<body onunload="jsPlumb.unload();">	
+	<body onunload="jsPlumb.unload();">
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="#">Regex Engine</a>
+					<a class="brand" href="javascript:void(0);">Regex Engine</a>
 				</div>
 			</div>
 		</div>
-		<div id="toolbar_container">
-			<div id="toolbar" class="btn-toolbar">
-				<div class="btn-group">
-					<button class="btn dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="javascript:void(0);" onclick="new Node.TextSource;">Basic</a></li>
-					</ul>
-				</div>
-				<div class="btn-group">
-					<button class="btn dropdown-toggle" data-toggle="dropdown">Operation <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="javascript:void(0);" onclick="new Node.Union;">Union</a></li>
-						<li><a href="javascript:void(0);" onclick="new Node.Intersection;">Intersection</a></li>
-						<li><a href="javascript:void(0);" onclick="new Node.Negation;">Negation</a></li>
-					</ul>
-				</div>
-				<div class="btn-group">
-					<button class="btn dropdown-toggle" data-toggle="dropdown">Output <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="javascript:void(0);" onclick="new Node.TextOutput;">Text</a></li>
-						<li><a href="javascript:void(0);" onclick="new Node.CountOutput;">Count</a></li>
-						<li><a href="javascript:void(0);" onclick="new Node.GraphOutput;">Graph</a></li>
-					</ul>
-				</div>
-			</div>
+		<div id="tab_main" style="display: none;">
+			<? require( "main.html" ); ?>
 		</div>
-		<div style="position:relative;" id="main">
-		</div>
-		<div class="prototype window well node node_source_text">
-			<div class="input-prepend input-append">
-				<span class="add-on">^</span><input type="text" /><span class="add-on">$</span><span class="add-on"><i class="icon-ok"></i></span>
-			</div>
-		</div>
-		<div class="prototype window well node node_union">
-			<span>⋃</span>
-		</div>
-		<div class="prototype window well node node_intersection">
-			<span>⋂</span>
-		</div>
-		<div class="prototype window well node node_negation">
-			<span>¬</span>
-		</div>
-		<div class="prototype window well node node_output_text">
-			<span class="type_normal" style="display: none;"></span>
-			<span class="type_empty" style="display: none;">∅</span>
-			<span class="type_no_input">No Input</span>
-		</div>
-		<div class="prototype window well node node_output_count">
-			<span class="type_normal" style="display: none;">0</span>
-			<span class="type_infinity" style="display: none;">∞</span>
-			<span class="type_no_input">No Input</span>
-		</div>
-		<div class="prototype window well node node_output_graph">
-			<div class="type_normal" style="display: none;"><a href="" title=""><img src="" alt=""/></a></div>
-			<div class="type_no_input"><span>No Input</span></div>
-			<div class="type_error" style="display: none;"><span>Error	</span></div>
+		<div id="tab_help">
+			<? require( "help.html" ); ?>
 		</div>
 	</body>
 </html>
