@@ -30,6 +30,10 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<a class="brand" href="javascript:void(0);">Regex Engine</a>
+					<ul class="nav">
+						<li class="active"><a class="tab_link" data-tab="main" href="javascript:void(0);">Home</a></li>
+						<li><a class="tab_link" data-tab="help" href="javascript:void(0);">Help</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -46,11 +50,13 @@
 				<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 			</div>
 		</div>
-		<div id="tab_main">
-			<? require( "main.html" ); ?>
-		</div>
-		<div id="tab_help" style="display: none;">
-			<? require( "help.html" ); ?>
+		<div id="tab_container">
+			<div id="tab_main">
+				<? require( "main.html" ); ?>
+			</div>
+			<div id="tab_help" style="display: none;">
+				<? require( "help.html" ); ?>
+			</div>
 		</div>
 	</body>
 </html>

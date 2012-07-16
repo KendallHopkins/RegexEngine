@@ -109,6 +109,13 @@ $ ->
 				name: "Delete"
 				callback: (key, opt) -> opt.$trigger.data("object").delete()
 	
+	$( "a.tab_link" ).on "click", (e) ->
+		$this = $ @
+		$this.closest( "ul" ).children().removeClass( "active" )
+		$this.closest( "li" ).addClass( "active" )
+		$( "#tab_container" ).children().hide()
+		$( "#tab_" + $this.attr "data-tab" ).show()
+	
 	class Node
 		list = []
 		@list = -> item for item in list when item instanceof @
