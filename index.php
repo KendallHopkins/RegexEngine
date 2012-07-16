@@ -46,10 +46,10 @@
 				<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 			</div>
 		</div>
-		<div id="tab_main" style="display: none;">
+		<div id="tab_main">
 			<? require( "main.html" ); ?>
 		</div>
-		<div id="tab_help">
+		<div id="tab_help" style="display: none;">
 			<? require( "help.html" ); ?>
 		</div>
 	</body>
