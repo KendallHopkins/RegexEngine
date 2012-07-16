@@ -1,7 +1,7 @@
 <ul>
 	<li>
-		<h3>What's is RegexMachine?</h3>
-		<p>RegexMachine is a Web Application built on a <a href="https://github.com/KendallHopkins/FormalTheory">FormalTheory library (PHP)</a> that allows for lexing, manipulation, optimization and render of <a href="http://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a> or Regex. In addition manipulation of regex it can transform any arbitrary regex from and to a <a href="http://en.wikipedia.org/wiki/Finite-state_machine">Finite Automata</a>. This allows for even more transformations to the expression such as negation, union, intersection, counting solutions, etc. These combination of tools can be very useful in solve many regex related problems, such as: find an inverse of a regex, proving two regexes have no overlapping solution, finding simpler equivalent regex, visualizing the DFA, proving two regex are equivalent and many more.</p>
+		<h3>What's is RegexEngine?</h3>
+		<p>RegexEngine is a Web Application built on a <a href="https://github.com/KendallHopkins/FormalTheory">FormalTheory library (PHP)</a> that allows for lexing, manipulation, optimization and render of <a href="http://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a> or Regex. In addition manipulation of regex it can transform any arbitrary regex from and to a <a href="http://en.wikipedia.org/wiki/Finite-state_machine">Finite Automata</a>. This allows for even more transformations to the expression such as negation, union, intersection, counting solutions, etc. These combination of tools can be very useful in solve many regex related problems, such as: find an inverse of a regex, proving two regexes have no overlapping solution, finding simpler equivalent regex, visualizing the DFA, proving two regex are equivalent and many more.</p>
 	</li>
 	<li>
 		<h3>How do I get started?</h3>
@@ -12,8 +12,8 @@
 		<p>We use Google's <a href="https://developers.google.com/chart/image/docs/gallery/graphviz">Graphviz</a> API which has a limited number of nodes and request length. You can often reduce the complexity of graph by removing all references to <code>.</code> and replacing them with a more specific set. For example <code>^10.*01$</code> -> <code>^10[01]*01$</code>.</p>
 	</li>
 	<li>
-		<h3>Why is my Text Output very complex?</h3>
-		<p>The transformation from a DFA to a Regular Expression isn't clean. Depending on the interconnections between states in the DFA the outputted regex can increase exponentially in size and requires often requires complex optimizations to reduce it back down to a reasonable size. </p>
+		<h3>Why is my Text Output needlessly complex?</h3>
+		<p>The transformation from a DFA to a Regular Expression isn't clean. Depending on the interconnections between states in the DFA the outputted regex can increase exponentially in size and requires often requires complex optimizations to reduce it back down to a reasonably-sized equivalent regex. </p>
 	</li>
 	<li>
 		<h3>How can I delete a wire once I created it?</h3>
